@@ -37,6 +37,12 @@ optional = true
 default-features = false
 version = "0.5.9"
 
+[dependencies.glam]
+package = "glam"
+optional = true
+# default-features = false
+version = "*"
+
 [workspace]
 members = ["delaunay_compare"]
 

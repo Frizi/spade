@@ -19,6 +19,9 @@
 //!  - `mint`: Enables rudimentary [mint](https://docs.rs/mint/latest/mint/) interoperability by
 //!    implementing the `From` and `Into` conversion traits between `spade::Point2` and
 //!    `mint::Point2`. Also implements [HasPosition] for `mint::Point2`.
+//!  - `glam`: Enables rudimentary [glam](https://docs.rs/glam/latest/glam/) interoperability by
+//!    implementing the `From` and `Into` conversion traits between `spade::Point2` and
+//!    `glam::Point2`. Also implements [HasPosition] for `glam::Point2`.
 
 #![no_std]
 #![forbid(unsafe_code)]
@@ -70,6 +73,8 @@ pub(crate) use delaunay_core::RemovalResult;
 
 #[cfg(feature = "mint")]
 mod mint_support;
+#[cfg(feature = "glam")]
+mod glam_support;
 #[cfg(test)]
 mod test_utilities;
 
